@@ -9,10 +9,10 @@ array = []
         while i <= k
         c = c + 1
             if c == 91
-                c = 97
+                c = 65
             end
             if c == 123
-                c = 65
+                c = 97
             end
         i = i + 1
         end
