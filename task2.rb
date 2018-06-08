@@ -20,9 +20,7 @@ array = []
     end
 end
 
-s = s.force_encoding(Encoding::ASCII)
-
-if n >= 1 && n <= 10000 && k >= 0 && k <= 10000
+if n >= 1 && n <= 10000 && k >= 0 && k <= 10000 && s.encoding.name == "US-ASCII"
     encrypt(s, k, array)
 end
 
