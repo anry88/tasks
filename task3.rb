@@ -4,22 +4,12 @@ t=t1+t2
 
 def printNumber(t)
     str=""
-    day=86400
     hour=3600
     minute=60
     
-    if t >= day
-        count = t/day
-        if count > 1
-            str = str+count.to_s+" дня "
-        else str = str +count.to_s+" день "
-        end
-        t = t - (count*day)
-    end
-    
     if t >= hour
        count = t/hour
-       if count==1 || count==21
+       if count%10 == 1 && !(count >= 11 && count <= 14)
           str = str+count.to_s+" час "
         elsif (count >= 2 && count <= 4) || (count >= 22 && count <= 24)
           str = str+count.to_s+" часа "
